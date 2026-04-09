@@ -2378,6 +2378,85 @@ body,
   }
 }
 
+/* ============================================================
+   SVG ICON SYSTEM
+   ============================================================ */
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.15em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.icon-lg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon-inline {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+  margin-right: 0.3em;
+}
+
+.icon-star {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-gold);
+  margin: 0 1px;
+}
+
+/* Service & pillar icons inherit section colors */
+.service-icon .icon,
+.pillar-icon .icon,
+.credential-icon .icon {
+  color: var(--color-gold);
+  stroke: var(--color-gold);
+}
+
+.contact-icon .icon {
+  color: var(--color-rose);
+  stroke: var(--color-rose);
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.social-link .icon {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.theme-toggle-icon .icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+}
+
+/* Quote mark as elegant serif character */
+.quote-mark {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/* Dark mode icon adjustments */
+[data-theme="dark"] .contact-icon .icon {
+  color: var(--color-gold-light);
+  stroke: var(--color-gold-light);
+}
+
+[data-theme="dark"] .icon-star {
+  color: var(--color-gold-light);
+}
+
+/* Footer inline icons */
+.footer-col .icon-inline {
+  opacity: 0.7;
+}
+
 /* --- Responsive adjustments for slider --- */
 @media (max-width: 768px) {
   .testimonials-slider.slider-active {
