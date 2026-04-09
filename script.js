@@ -297,10 +297,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resize, { passive: true });
 
     const COLORS = [
-      { r: 212, g: 168, b: 67, a: 0.3 },   // gold
-      { r: 184, g: 134, b: 11, a: 0.25 },   // dark gold
-      { r: 160, g: 33,  b: 58, a: 0.15 },   // rose
-      { r: 240, g: 208, b: 112, a: 0.2 },   // light gold
+      { r: 200, g: 184, b: 160, a: 0.25 },  // champagne
+      { r: 184, g: 166, b: 144, a: 0.2 },   // warm taupe
+      { r: 176, g: 128, b: 144, a: 0.12 },  // dusty rose
+      { r: 220, g: 208, b: 192, a: 0.18 },  // soft cream
     ];
 
     function createParticle() {
@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Console Branding ---
   console.log(
     '%c🌹 Dra. Phaula Ferreira %c Ciência, ética e cuidado humano.',
-    'color: #8B1A2B; font-size: 16px; font-weight: bold;',
-    'color: #B8860B; font-size: 12px; font-style: italic;'
+    'color: #7A2938; font-size: 16px; font-weight: bold;',
+    'color: #B8A690; font-size: 12px; font-style: italic;'
   );
 });
