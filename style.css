@@ -2382,17 +2382,24 @@ body,
    SVG ICON SYSTEM
    ============================================================ */
 .icon {
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: -0.15em;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
   stroke-linecap: round;
   stroke-linejoin: round;
   flex-shrink: 0;
 }
 
+/* Icons inside buttons - keep small, inline with text */
+.btn .icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+}
+
 .icon-lg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .icon-inline {
@@ -2410,11 +2417,23 @@ body,
 }
 
 /* Service & pillar icons inherit section colors */
-.service-icon .icon,
-.pillar-icon .icon,
+.service-icon .icon {
+  color: var(--color-gold);
+  stroke: var(--color-gold);
+}
+
+.pillar-icon .icon {
+  color: var(--color-gold);
+  stroke: var(--color-gold);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
 .credential-icon .icon {
   color: var(--color-gold);
   stroke: var(--color-gold);
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .contact-icon .icon {
