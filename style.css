@@ -345,13 +345,13 @@ ul, ol {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-white);
-  background: linear-gradient(135deg, var(--color-rose), var(--color-rose-deep));
+  color: #f0e8e0;
+  background: linear-gradient(135deg, #3D0A0A, #2B0000);
   padding: 10px 24px;
   border-radius: var(--radius-full);
   margin-left: var(--space-md);
   transition: all var(--transition-smooth);
-  box-shadow: 0 4px 15px rgba(122, 41, 56, 0.25);
+  box-shadow: 0 4px 15px rgba(43, 0, 0, 0.3);
   cursor: pointer;
   border: none;
   letter-spacing: 0.5px;
@@ -359,8 +359,8 @@ ul, ol {
 
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(122, 41, 56, 0.35);
-  color: var(--color-white);
+  box-shadow: 0 6px 25px rgba(43, 0, 0, 0.45);
+  color: #f0e8e0;
 }
 
 /* Mobile Menu Toggle */
@@ -574,15 +574,15 @@ ul, ol {
 }
 
 .btn-primary {
-  color: var(--color-white);
-  background: linear-gradient(135deg, var(--color-rose), var(--color-rose-deep));
-  box-shadow: 0 4px 20px rgba(122, 41, 56, 0.3);
+  color: #f0e8e0;
+  background: linear-gradient(135deg, #3D0A0A, #2B0000);
+  box-shadow: 0 4px 20px rgba(43, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(122, 41, 56, 0.4);
-  color: var(--color-white);
+  box-shadow: 0 8px 30px rgba(43, 0, 0, 0.45);
+  color: #f0e8e0;
 }
 
 .btn-secondary {
@@ -1227,14 +1227,14 @@ ul, ol {
 .contact-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--color-rose), var(--color-rose-deep));
+  background: linear-gradient(135deg, #3D0A0A, #2B0000);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(122, 41, 56, 0.2);
+  box-shadow: 0 4px 12px rgba(43, 0, 0, 0.2);
 }
 
 .contact-item-label {
@@ -1920,22 +1920,7 @@ ul, ol {
   background: rgba(255, 255, 255, 0.04);
 }
 
-/* Buttons — always white text on colored bg */
-[data-theme="dark"] .btn-primary {
-  color: #ffffff;
-}
-
-[data-theme="dark"] .btn-primary:hover {
-  color: #ffffff;
-}
-
-[data-theme="dark"] .nav-cta {
-  color: #ffffff;
-}
-
-[data-theme="dark"] .nav-cta:hover {
-  color: #ffffff;
-}
+/* Buttons — consistent wine color in both modes */
 
 /* Footer text — already on dark bg, ensure readable */
 [data-theme="dark"] .site-footer {
