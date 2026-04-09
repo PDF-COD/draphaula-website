@@ -1749,12 +1749,12 @@ ul, ol {
   --color-text-muted: #9a8a78;
   --color-text-light: #6b5e50;
 
-  /* Rose — soft dusty rose for dark bg */
-  --color-rose-deep: #C0909A;
-  --color-rose: #D0A0A8;
-  --color-rose-light: #DDB8BE;
-  --color-rose-pale: rgba(192, 144, 154, 0.12);
-  --color-rose-glass: rgba(192, 144, 154, 0.08);
+  /* Rose — wine tone matching light mode */
+  --color-rose-deep: #803544;
+  --color-rose: #964050;
+  --color-rose-light: #B05565;
+  --color-rose-pale: rgba(128, 53, 68, 0.15);
+  --color-rose-glass: rgba(128, 53, 68, 0.1);
 
   /* Gold — warm champagne for dark bg */
   --color-gold-deep: #C8B8A0;
@@ -1826,11 +1826,11 @@ ul, ol {
 
 /* Nav links dark */
 [data-theme="dark"] .nav-link:hover {
-  background: rgba(192, 144, 154, 0.1);
+  background: rgba(128, 53, 68, 0.1);
 }
 
 [data-theme="dark"] .nav-link.active {
-  background: rgba(192, 144, 154, 0.12);
+  background: rgba(128, 53, 68, 0.12);
 }
 
 /* About section dark */
@@ -1871,11 +1871,11 @@ ul, ol {
 }
 
 [data-theme="dark"] .service-icon {
-  background: linear-gradient(135deg, rgba(192, 144, 154, 0.12), rgba(216, 200, 176, 0.1));
+  background: linear-gradient(135deg, rgba(128, 53, 68, 0.12), rgba(216, 200, 176, 0.1));
 }
 
 [data-theme="dark"] .service-card:hover .service-icon {
-  background: linear-gradient(135deg, rgba(192, 144, 154, 0.2), rgba(216, 200, 176, 0.15));
+  background: linear-gradient(135deg, rgba(128, 53, 68, 0.2), rgba(216, 200, 176, 0.15));
 }
 
 /* Approach section dark */
@@ -1986,7 +1986,7 @@ ul, ol {
 }
 
 [data-theme="dark"] .testimonial-avatar {
-  background: linear-gradient(135deg, rgba(192, 144, 154, 0.2), rgba(216, 200, 176, 0.15));
+  background: linear-gradient(135deg, rgba(128, 53, 68, 0.2), rgba(216, 200, 176, 0.15));
 }
 
 /* Contact section dark */
