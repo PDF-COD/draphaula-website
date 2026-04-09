@@ -1239,7 +1239,8 @@ ul, ol {
 
 .contact-item-label {
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: var(--color-rose-deep);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: var(--space-xs);
@@ -2437,8 +2438,8 @@ body,
 }
 
 .contact-icon .icon {
-  color: var(--color-rose);
-  stroke: var(--color-rose);
+  color: #fff;
+  stroke: #fff;
   width: 1.4em;
   height: 1.4em;
 }
@@ -2463,8 +2464,8 @@ body,
 
 /* Dark mode icon adjustments */
 [data-theme="dark"] .contact-icon .icon {
-  color: var(--color-gold-light);
-  stroke: var(--color-gold-light);
+  color: #fff;
+  stroke: #fff;
 }
 
 [data-theme="dark"] .icon-star {
