@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const subject = document.getElementById('form-subject').value;
       const message = document.getElementById('form-message').value.trim();
 
-      // Build WhatsApp message
+      // Build mailto message
       const subjectLabels = {
         'consulta-psiquiatria': 'Consulta de Psiquiatria',
         'consulta-familia': 'Consulta de Medicina da Família',
@@ -189,20 +189,20 @@ document.addEventListener('DOMContentLoaded', () => {
         'outro': 'Outro assunto'
       };
 
-      let waMessage = `Olá, Dra. Phaula! Vim pelo site.\n\n`;
-      waMessage += `*Nome:* ${name}\n`;
-      if (phone) waMessage += `*Telefone:* ${phone}\n`;
-      if (email) waMessage += `*E-mail:* ${email}\n`;
-      if (subject) waMessage += `*Assunto:* ${subjectLabels[subject] || subject}\n`;
-      if (message) waMessage += `\n*Mensagem:*\n${message}`;
+      const mailSubject = subjectLabels[subject] || 'Contato pelo site';
+      let mailBody = `Olá, Dra. Phaula!\n\n`;
+      mailBody += `Nome: ${name}\n`;
+      if (phone) mailBody += `Telefone: ${phone}\n`;
+      if (email) mailBody += `E-mail: ${email}\n`;
+      if (message) mailBody += `\nMensagem:\n${message}`;
 
-      const waUrl = `https://wa.me/5562981362908?text=${encodeURIComponent(waMessage)}`;
-      window.open(waUrl, '_blank');
+      const mailtoUrl = `mailto:contato@draphaulaferreira.com.br?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      window.location.href = mailtoUrl;
 
       // Visual feedback
       const submitBtn = document.getElementById('form-submit-btn');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg> Redirecionando para WhatsApp...';
+      submitBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg> Abrindo e-mail...';
       setTimeout(() => {
         submitBtn.innerHTML = originalText;
         contactForm.reset();
