@@ -174,27 +174,39 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const formData = new FormData(this);
+      const name = document.getElementById('form-name').value.trim();
+      const phone = document.getElementById('form-phone').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      const subject = document.getElementById('form-subject').value;
+      const message = document.getElementById('form-message').value.trim();
+
+      // Build WhatsApp message
+      const subjectLabels = {
+        'consulta-psiquiatria': 'Consulta de Psiquiatria',
+        'consulta-familia': 'Consulta de Medicina da Família',
+        'retorno': 'Retorno de consulta',
+        'informacoes': 'Informações gerais',
+        'outro': 'Outro assunto'
+      };
+
+      let waMessage = `Olá, Dra. Phaula! Vim pelo site.\n\n`;
+      waMessage += `*Nome:* ${name}\n`;
+      if (phone) waMessage += `*Telefone:* ${phone}\n`;
+      if (email) waMessage += `*E-mail:* ${email}\n`;
+      if (subject) waMessage += `*Assunto:* ${subjectLabels[subject] || subject}\n`;
+      if (message) waMessage += `\n*Mensagem:*\n${message}`;
+
+      const waUrl = `https://wa.me/5562981362908?text=${encodeURIComponent(waMessage)}`;
+      window.open(waUrl, '_blank');
+
+      // Visual feedback
       const submitBtn = document.getElementById('form-submit-btn');
       const originalText = submitBtn.innerHTML;
-
-      // Simulate submission
-      submitBtn.innerHTML = '<span>⏳</span> Enviando...';
-      submitBtn.disabled = true;
-      submitBtn.style.opacity = '0.7';
-
+      submitBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg> Redirecionando para WhatsApp...';
       setTimeout(() => {
-        submitBtn.innerHTML = '<span>✅</span> Mensagem Enviada!';
-        submitBtn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
-
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = '1';
-          submitBtn.style.background = '';
-          contactForm.reset();
-        }, 3000);
-      }, 1500);
+        submitBtn.innerHTML = originalText;
+        contactForm.reset();
+      }, 3000);
     });
 
     // Phone input mask
