@@ -2437,9 +2437,11 @@ body,
   height: 1.2rem;
 }
 
-.contact-icon .icon {
-  color: #fff;
-  stroke: #fff;
+.contact-icon .icon,
+.contact-icon svg {
+  color: #fff !important;
+  stroke: #fff !important;
+  fill: none !important;
   width: 1.4em;
   height: 1.4em;
 }
