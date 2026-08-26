@@ -12,6 +12,7 @@
   <meta property="og:title" content="Dra. Phaula Ferreira — Médica | Psiquiatria & Medicina da Família">
   <meta property="og:description" content="Ciência, ética e cuidado humano. Agende sua consulta em Goiânia.">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dra. Phaula Ferreira">
   <meta property="og:url" content="https://draphaula.com.br/">
   <meta property="og:image" content="https://draphaula.com.br/assets/images/logo-hd-hero.png">
 
@@ -27,29 +28,61 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Dra. Phaula Ferreira — Médica",
-    "description": "Médica Psiquiatra e Médica da Família em Goiânia. Pós-graduada em Psiquiatria e Medicina da Família e Comunidade. CRM 38980.",
-    "url": "https://draphaula.com.br",
-    "telephone": "+55-62-98428-4282",
-    "email": "contato@draphaulaferreira.com.br",
-    "image": "https://draphaula.com.br/assets/images/logo-hd-hero.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "R. GB-14, 151 - Quadra 62 Lote 17 - Sala 4",
-      "addressLocality": "Goiânia",
-      "addressRegion": "GO",
-      "postalCode": "74683-130",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -16.6145,
-      "longitude": -49.2172
-    },
-    "medicalSpecialty": ["Psychiatry", "FamilyMedicine"],
-    "priceRange": "$$",
-    "areaServed": "Goiânia, GO"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://draphaula.com.br/#website",
+        "url": "https://draphaula.com.br/",
+        "name": "Dra. Phaula Ferreira",
+        "alternateName": ["Dra Phaula", "Dra Phaula Ferreira"]
+      },
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://draphaula.com.br/#consultorio",
+        "name": "Dra. Phaula Ferreira",
+        "alternateName": ["Dra Phaula", "Consultório Médico Dra. Phaula Ferreira"],
+        "description": "Médica Psiquiatra e Médica da Família em Goiânia. Pós-graduada em Psiquiatria e Medicina da Família e Comunidade. CRM 38980.",
+        "url": "https://draphaula.com.br/",
+        "telephone": "+55-62-98428-4282",
+        "email": "contato@draphaulaferreira.com.br",
+        "image": "https://draphaula.com.br/assets/images/logo-hd-hero.png",
+        "sameAs": [
+          "https://www.instagram.com/dra_phaula/",
+          "https://www.google.com/maps/place/Dra.+Phaula+Ferreira/data=!4m2!3m1!1s0x0:0x1a7f2ff73c6f1a40"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. GB-14, 151 - Quadra 62 Lote 17 - Sala 4",
+          "addressLocality": "Goiânia",
+          "addressRegion": "GO",
+          "postalCode": "74683-130",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -16.6145,
+          "longitude": -49.2172
+        },
+        "medicalSpecialty": ["Psychiatry", "FamilyMedicine"],
+        "priceRange": "$$",
+        "areaServed": "Goiânia, GO"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://draphaula.com.br/#dra-phaula-ferreira",
+        "name": "Dra. Phaula Ferreira",
+        "alternateName": ["Dra Phaula", "Phaula Ferreira"],
+        "jobTitle": "Médica",
+        "identifier": "CRM-GO 38980",
+        "url": "https://draphaula.com.br/",
+        "image": "https://draphaula.com.br/assets/images/dra-phaula.webp",
+        "sameAs": [
+          "https://www.instagram.com/dra_phaula/",
+          "https://www.google.com/maps/place/Dra.+Phaula+Ferreira/data=!4m2!3m1!1s0x0:0x1a7f2ff73c6f1a40"
+        ],
+        "worksFor": { "@id": "https://draphaula.com.br/#consultorio" }
+      }
+    ]
   }
   </script>
 </head>
