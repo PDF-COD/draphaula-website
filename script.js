@@ -182,8 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Build mailto message
       const subjectLabels = {
-        'consulta-psiquiatria': 'Consulta de Psiquiatria',
-        'consulta-familia': 'Consulta de Medicina da Família',
+        'consulta-familia': 'Consulta médica',
         'retorno': 'Retorno de consulta',
         'informacoes': 'Informações gerais',
         'outro': 'Outro assunto'
