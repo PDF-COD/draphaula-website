@@ -8,7 +8,7 @@
   <title>Dra. Phaula Ferreira | Links oficiais</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --espresso: #211915;
@@ -100,32 +100,22 @@
       mix-blend-mode: multiply;
     }
 
-    .folio > :not(.botanical) {
+    .folio > :not(.vintage-bouquet) {
       position: relative;
       z-index: 2;
     }
 
-    .botanical {
+    .vintage-bouquet {
       position: absolute;
       z-index: 1;
-      width: 170px;
+      right: -62px;
+      bottom: -56px;
+      width: 286px;
       height: auto;
       pointer-events: none;
-      opacity: 0.42;
-    }
-
-    .botanical-left {
-      top: 42px;
-      left: -76px;
-      color: var(--burgundy);
-      transform: rotate(-10deg);
-    }
-
-    .botanical-right {
-      right: -77px;
-      bottom: 135px;
-      color: var(--olive);
-      transform: scaleX(-1) rotate(-8deg);
+      opacity: 0.43;
+      transform: rotate(-5deg);
+      filter: sepia(.12) saturate(.82) contrast(.96);
     }
 
     .monogram {
@@ -184,13 +174,13 @@
     }
 
     h1 {
-      margin: 0;
+      margin: -2px 0 0;
       color: var(--burgundy-deep);
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2.15rem, 8vw, 2.82rem);
-      font-weight: 700;
-      line-height: 0.98;
-      letter-spacing: -0.025em;
+      font-family: "Pinyon Script", "Cormorant Garamond", cursive;
+      font-size: clamp(3.05rem, 11.5vw, 4.05rem);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: 0;
       text-shadow: 0 1px 0 rgba(255, 240, 205, 0.4);
     }
 
@@ -340,9 +330,7 @@
       .folio::before { inset: 6px; border-radius: 17px 17px 12px 12px; }
       .monogram { margin-bottom: 12px; }
       .portrait-frame { width: 148px; height: 148px; }
-      .botanical { width: 148px; opacity: 0.36; }
-      .botanical-left { left: -69px; top: 48px; }
-      .botanical-right { right: -69px; bottom: 142px; }
+      .vintage-bouquet { right: -61px; bottom: -52px; width: 250px; opacity: 0.39; }
       .link-card { grid-template-columns: 45px 1fr 18px; gap: 11px; padding: 12px; }
       .icon { width: 45px; height: 45px; }
     }
@@ -355,35 +343,7 @@
 <body>
   <main class="page">
     <section class="folio" aria-labelledby="profile-name">
-      <svg class="botanical botanical-left" viewBox="0 0 190 280" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M89 269C88 228 92 186 108 151C116 134 125 119 123 101"/>
-          <path d="M92 211C72 203 55 210 42 226C59 231 77 226 93 215" fill="rgba(108,48,50,.16)"/>
-          <path d="M100 181C121 171 139 174 154 187C139 195 121 192 102 185" fill="rgba(108,48,50,.14)"/>
-          <path d="M106 155C88 148 73 137 66 120C84 119 99 129 111 144" fill="rgba(108,48,50,.13)"/>
-          <path d="M125 108C109 121 84 120 66 107C46 93 44 66 58 47C69 33 85 27 100 30C116 21 137 30 145 46C158 54 163 71 157 85C151 101 138 109 125 108Z" fill="rgba(108,48,50,.12)"/>
-          <path d="M100 31C89 41 86 54 92 65C98 76 112 80 123 74C133 69 136 57 132 47C128 38 116 31 100 31Z"/>
-          <path d="M92 64C78 60 66 65 62 76C58 87 66 100 78 105C90 110 104 105 110 95C116 85 111 75 100 70"/>
-          <path d="M123 73C139 72 149 81 147 92C145 102 135 108 123 108C110 108 100 101 99 92"/>
-          <path d="M77 105C69 94 70 82 78 75C85 69 95 69 103 74C111 79 114 88 110 95C107 102 99 105 92 102C85 99 82 92 85 86C88 81 94 79 99 82C103 84 105 89 103 93"/>
-          <path d="M69 116C54 112 43 118 36 131C50 135 63 130 75 120" fill="rgba(80,81,59,.14)"/>
-        </g>
-      </svg>
-
-      <svg class="botanical botanical-right" viewBox="0 0 190 280" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M89 269C88 228 92 186 108 151C116 134 125 119 123 101"/>
-          <path d="M92 211C72 203 55 210 42 226C59 231 77 226 93 215" fill="rgba(80,81,59,.17)"/>
-          <path d="M100 181C121 171 139 174 154 187C139 195 121 192 102 185" fill="rgba(80,81,59,.15)"/>
-          <path d="M106 155C88 148 73 137 66 120C84 119 99 129 111 144" fill="rgba(80,81,59,.14)"/>
-          <path d="M125 108C109 121 84 120 66 107C46 93 44 66 58 47C69 33 85 27 100 30C116 21 137 30 145 46C158 54 163 71 157 85C151 101 138 109 125 108Z" fill="rgba(108,48,50,.12)"/>
-          <path d="M100 31C89 41 86 54 92 65C98 76 112 80 123 74C133 69 136 57 132 47C128 38 116 31 100 31Z"/>
-          <path d="M92 64C78 60 66 65 62 76C58 87 66 100 78 105C90 110 104 105 110 95C116 85 111 75 100 70"/>
-          <path d="M123 73C139 72 149 81 147 92C145 102 135 108 123 108C110 108 100 101 99 92"/>
-          <path d="M77 105C69 94 70 82 78 75C85 69 95 69 103 74C111 79 114 88 110 95C107 102 99 105 92 102C85 99 82 92 85 86C88 81 94 79 99 82C103 84 105 89 103 93"/>
-          <path d="M69 116C54 112 43 118 36 131C50 135 63 130 75 120" fill="rgba(80,81,59,.14)"/>
-        </g>
-      </svg>
+      <img class="vintage-bouquet" src="rosas-vitorianas.png" alt="" aria-hidden="true">
 
       <div class="monogram" aria-hidden="true">PF</div>
 
