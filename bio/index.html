@@ -66,9 +66,8 @@
       border: 1px solid rgba(214, 184, 128, 0.72);
       border-radius: 28px 28px 20px 20px;
       background:
-        radial-gradient(circle at 18% 5%, rgba(255,255,255,.18), transparent 30%),
-        radial-gradient(circle at 82% 94%, rgba(91,57,35,.13), transparent 32%),
-        linear-gradient(145deg, #dbc596 0%, var(--parchment) 54%, #b89561 100%);
+        linear-gradient(rgba(225, 205, 164, .12), rgba(126, 86, 52, .08)),
+        url("fundo-rosas-vintage.png") center / cover no-repeat;
       box-shadow:
         0 26px 74px rgba(0, 0, 0, 0.52),
         inset 0 1px 0 rgba(255, 247, 220, 0.78),
@@ -93,29 +92,16 @@
       z-index: 0;
       inset: 0;
       pointer-events: none;
-      opacity: 0.34;
+      opacity: 0.2;
       background:
         repeating-radial-gradient(circle at 30% 40%, rgba(63, 42, 26, .11) 0 0.7px, transparent 0.7px 4px),
         repeating-linear-gradient(5deg, transparent 0 7px, rgba(255,255,255,.035) 7px 8px);
       mix-blend-mode: multiply;
     }
 
-    .folio > :not(.vintage-bouquet) {
+    .folio > * {
       position: relative;
       z-index: 2;
-    }
-
-    .vintage-bouquet {
-      position: absolute;
-      z-index: 1;
-      right: -62px;
-      bottom: -56px;
-      width: 286px;
-      height: auto;
-      pointer-events: none;
-      opacity: 0.43;
-      transform: rotate(-5deg);
-      filter: sepia(.12) saturate(.82) contrast(.96);
     }
 
     .monogram {
@@ -330,7 +316,6 @@
       .folio::before { inset: 6px; border-radius: 17px 17px 12px 12px; }
       .monogram { margin-bottom: 12px; }
       .portrait-frame { width: 148px; height: 148px; }
-      .vintage-bouquet { right: -61px; bottom: -52px; width: 250px; opacity: 0.39; }
       .link-card { grid-template-columns: 45px 1fr 18px; gap: 11px; padding: 12px; }
       .icon { width: 45px; height: 45px; }
     }
@@ -343,8 +328,6 @@
 <body>
   <main class="page">
     <section class="folio" aria-labelledby="profile-name">
-      <img class="vintage-bouquet" src="rosas-vitorianas.png" alt="" aria-hidden="true">
-
       <div class="monogram" aria-hidden="true">PF</div>
 
       <div class="portrait-frame">
