@@ -166,3 +166,19 @@ img{max-width:100%}
   .top-whatsapp{width:min(226px,84vw);height:66px;padding-inline:34px}
   .hero-copy h1{font-size:clamp(2.7rem,14vw,3.15rem)}
 }
+
+/* Revisao visual 2026-09-02: cantos florais simetricos, botao de tema fora dos cantos, eyebrow na trajetoria */
+.story-copy .eyebrow{margin-bottom:14px}
+.hero-copy .ornament-line{margin-top:0}
+.corner-floral-right{right:0;width:185px;height:165px}
+@media(min-width:1101px){.nav-wrap{position:static}.theme-toggle{left:auto;right:200px}}
+@media(min-width:1101px) and (max-width:1280px){.corner-floral,.corner-floral-right{width:130px;height:120px}.main-nav{gap:28px}.theme-toggle{right:142px}}
+@media(max-width:1100px){.nav-wrap{padding-inline:100px;gap:14px}.theme-toggle{position:static;left:auto;right:auto;top:auto;width:38px;height:38px;flex:none;order:2}.main-nav{gap:18px}.corner-floral,.corner-floral-right{width:90px;height:85px}.corner-floral-left{left:0}.corner-floral-right{right:0;display:block}}
+@media(max-width:920px){.nav-wrap{padding-inline:78px;gap:12px}.main-nav{gap:10px}.main-nav a{letter-spacing:.06em}.theme-toggle{width:34px;height:34px}.corner-floral,.corner-floral-right{width:70px;height:65px}}
+@media(max-width:680px){.corner-floral,.corner-floral-right{display:none}.theme-toggle{position:absolute;top:10px;left:auto;right:64px;width:40px;height:40px}}
+/* Placa do nome: texto dimensionado pela largura util da placa (unidades cqw) e fallback de fonte com metrica proxima da Pinyon Script */
+.brand-plaque{container-type:inline-size}
+.brand-plaque span{font-family:'Pinyon Script','Cormorant Garamond',Georgia,serif;font-size:min(4rem,11.8cqw);white-space:nowrap}
+.brand-plaque b{white-space:nowrap;font-size:clamp(.69rem,2.2cqw,.72rem)}
+@media(max-width:920px){.brand-plaque span{font-size:min(3rem,11.8cqw)}}
+@media(max-width:680px){.brand-plaque span{font-size:min(2.3rem,12cqw)}}
