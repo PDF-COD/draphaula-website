@@ -126,3 +126,43 @@ html[data-theme="dark"] .theme-toggle{background:#f0dfc5;color:#352019;border-co
 .floating-whatsapp img{width:50px;height:50px;filter:drop-shadow(0 2px 3px rgba(20,9,7,.28))}
 html[data-theme="dark"] .floating-whatsapp{background:linear-gradient(145deg,#5a3127,#21120f);border-color:#d2ab73;box-shadow:0 8px 22px rgba(0,0,0,.48)}
 @media(max-width:680px){.floating-whatsapp{width:60px;height:60px;padding:7px}.floating-whatsapp img{width:46px;height:46px}}
+
+/* Versão 8 — correção estrutural do topo para celulares Samsung e telas estreitas */
+img{max-width:100%}
+@media(max-width:680px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{font-size:16px}
+  .site-header{width:100%;height:60px;min-height:60px}
+  .nav-wrap{width:100%;height:60px;padding:0 18px;justify-content:flex-end}
+  .theme-toggle{top:10px;left:auto;right:64px;width:40px;height:40px}
+  .menu-toggle{display:grid;flex:0 0 46px;width:46px;height:46px;margin:0;padding:10px 9px;place-content:center;gap:5px}
+  .menu-toggle span{width:27px}
+  .main-nav{position:absolute;top:60px;left:-18px;right:-18px;width:auto;padding:22px 26px;z-index:20}
+
+  .hero{padding:20px 16px 36px}
+  .hero>.shell{width:100%;max-width:none}
+  .brand-row{display:flex;width:100%;min-width:0;flex-direction:column;align-items:center;gap:12px;margin:0 auto 22px}
+  .brand-plaque{flex:none;width:100%;max-width:100%;min-width:0;height:106px;padding:22px 34px 14px;background-size:100% 100%}
+  .brand-plaque span{max-width:100%;font-size:clamp(2rem,10.5vw,2.45rem);line-height:.9;white-space:nowrap}
+  .brand-plaque b{max-width:100%;margin-top:7px;font-size:.52rem;line-height:1.15;letter-spacing:.14em;white-space:nowrap}
+  .top-whatsapp{flex:none;justify-self:auto;width:min(240px,82vw);max-width:100%;height:70px;padding:14px 38px}
+
+  .hero-grid{display:grid;width:100%;min-width:0;grid-template-columns:minmax(0,1fr);gap:18px}
+  .hero-copy{width:100%;min-width:0;text-align:center}
+  .hero-copy h1{font-size:clamp(2.9rem,14vw,3.45rem)}
+  .hero-lead{margin-inline:auto}
+  .hero-specialties{width:100%;align-items:stretch}
+  .hero-specialties a{width:100%;min-width:0}
+  .portrait-stage{display:block;width:100%;min-width:0;min-height:0;margin:6px 0 0;text-align:center}
+  .portrait-composite{display:block;width:min(100%,420px);height:auto;max-height:none;margin:0 auto}
+  .brand-row:before{left:0;right:0}
+}
+
+@media(max-width:390px){
+  .hero{padding-inline:13px}
+  .brand-plaque{height:100px;padding-inline:29px}
+  .brand-plaque span{font-size:clamp(1.92rem,10.2vw,2.22rem)}
+  .brand-plaque b{font-size:.49rem;letter-spacing:.11em}
+  .top-whatsapp{width:min(226px,84vw);height:66px;padding-inline:34px}
+  .hero-copy h1{font-size:clamp(2.7rem,14vw,3.15rem)}
+}
