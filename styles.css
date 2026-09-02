@@ -182,3 +182,8 @@ img{max-width:100%}
 .brand-plaque b{white-space:nowrap;font-size:clamp(.69rem,2.2cqw,.72rem)}
 @media(max-width:920px){.brand-plaque span{font-size:min(3rem,11.8cqw)}}
 @media(max-width:680px){.brand-plaque span{font-size:min(2.3rem,12cqw)}}
+/* Modo escuro: a moldura da placa volta (o atalho background do tema escuro a removia), clareada para ler sobre o fundo escuro */
+.brand-plaque{isolation:isolate}
+html[data-theme="dark"] .brand-plaque{background:transparent;box-shadow:none}
+html[data-theme="dark"] .brand-plaque:before{content:"";display:block;position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("assets/placa-marca-floral-integrada-limpa-v7.webp") center/100% 100% no-repeat;filter:brightness(1.35) saturate(1.05);opacity:.95;transform:none;translate:none}
+html[data-theme="dark"] .brand-plaque:after{display:none}
